@@ -1,0 +1,19 @@
+Tortilla :: User Info
+
+
+Admin::
+-------
+username: admin
+password: 123456
+
+
+Sales::
+-------
+username: sales
+password: 123456
+
+
+Manager::
+---------
+username: manager
+password: 123456

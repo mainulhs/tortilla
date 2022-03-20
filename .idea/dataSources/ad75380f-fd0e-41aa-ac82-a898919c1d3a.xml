@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="tortilla@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="tortilla">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="isp"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="payment"/>
+    <schema id="7" parent="1" name="performance_schema"/>
+    <schema id="8" parent="1" name="phpmyadmin"/>
+    <schema id="9" parent="1" name="test"/>
+    <schema id="10" parent="1" name="testci"/>
+    <table id="11" parent="2" name="tor_productinfo"/>
+    <table id="12" parent="2" name="tor_productsell_details"/>
+    <table id="13" parent="2" name="tor_productsell_master"/>
+    <table id="14" parent="2" name="tor_userinfo"/>
+    <column id="15" parent="11" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="16" parent="11" name="product_code">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="17" parent="11" name="product_name">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="18" parent="11" name="unit_price">
+      <Position>4</Position>
+      <DataType>float(7,2)|0</DataType>
+    </column>
+    <column id="19" parent="11" name="selling_price">
+      <Position>5</Position>
+      <DataType>float(7,2)|0</DataType>
+    </column>
+    <column id="20" parent="11" name="status">
+      <Position>6</Position>
+      <DataType>varchar(12)|0</DataType>
+      <DefaultExpression>&apos;active&apos;</DefaultExpression>
+    </column>
+    <column id="21" parent="11" name="created_by">
+      <Position>7</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="22" parent="11" name="created_date">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="23" parent="11" name="modified_by">
+      <Position>9</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="24" parent="11" name="modified_date">
+      <Position>10</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <index id="25" parent="11" name="product_code">
+      <ColNames>product_code</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="26" parent="11" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="27" parent="11" name="product_code">
+      <ColNames>product_code</ColNames>
+      <UnderlyingIndexName>product_code</UnderlyingIndexName>
+    </key>
+    <column id="28" parent="12" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="29" parent="12" name="product_code">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="30" parent="12" name="product_name">
+      <Position>3</Position>
+      <DataType>varchar(80)|0</DataType>
+    </column>
+    <column id="31" parent="12" name="unit_price">
+      <Position>4</Position>
+      <DataType>float(7,2)|0</DataType>
+    </column>
+    <column id="32" parent="12" name="quantity">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="33" parent="12" name="total_price">
+      <Position>6</Position>
+      <DataType>float(8,3)|0</DataType>
+    </column>
+    <column id="34" parent="12" name="invoice_no">
+      <Position>7</Position>
+      <DataType>varchar(15)|0</DataType>
+    </column>
+    <column id="35" parent="12" name="created_by">
+      <Position>8</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="36" parent="12" name="created_time">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="37" parent="12" name="modified_by">
+      <Position>10</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="38" parent="12" name="modified_time">
+      <Position>11</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <key id="39" parent="12" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="40" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="41" parent="13" name="invoice_no">
+      <Position>2</Position>
+      <DataType>varchar(15)|0</DataType>
+    </column>
+    <column id="42" parent="13" name="invoice_date">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="43" parent="13" name="customer_name">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="44" parent="13" name="invoice_day">
+      <Position>5</Position>
+      <DataType>varchar(12)|0</DataType>
+    </column>
+    <column id="45" parent="13" name="created_by">
+      <Position>6</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="46" parent="13" name="created_date">
+      <Position>7</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="47" parent="13" name="modified_by">
+      <Position>8</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="48" parent="13" name="modified_date">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="49" parent="13" name="totalprice">
+      <Position>10</Position>
+      <DataType>float(10,3)|0</DataType>
+    </column>
+    <key id="50" parent="13" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="51" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="52" parent="14" name="display_name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="53" parent="14" name="username">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="54" parent="14" name="pword">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="55" parent="14" name="userrole">
+      <Position>5</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="56" parent="14" name="status">
+      <Position>6</Position>
+      <DataType>varchar(10)|0</DataType>
+      <DefaultExpression>&apos;active&apos;</DefaultExpression>
+    </column>
+    <column id="57" parent="14" name="created_by">
+      <Position>7</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="58" parent="14" name="created_time">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="59" parent="14" name="modified_by">
+      <Position>9</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="60" parent="14" name="modified_time">
+      <Position>10</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="61" parent="14" name="privilege">
+      <Position>11</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <key id="62" parent="14" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
